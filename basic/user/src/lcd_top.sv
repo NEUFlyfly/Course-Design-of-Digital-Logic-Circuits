@@ -1,30 +1,30 @@
 `default_nettype none `timescale 1ns / 1ps
 
 module lcd_top (
-    input wire clk_50M,     //50MHz Ê±ÖÓÊäÈë
+    input wire clk_50M,     //50MHz Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-    input wire reset_btn,  //BTN6ÊÖ¶¯¸´Î»°´Å¥£¬´øÏû¶¶µçÂ·£¬°´ÏÂÊ±Îª1
+    input wire reset_btn,  //BTN6ï¿½Ö¶ï¿½ï¿½ï¿½Î»ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±Îª1
     input wire [3:0] countA_shi,
     input wire [3:0] countA_ge,
     input wire [3:0] countB_shi,
-    input wire [3:0] countB_ge,
+    input wire [3:0] countB_ge,   
     input wire [3:0] countC_shi,
     input wire [3:0] countC_ge,
-    input wire [3:0] countD_shi,//0,0,1,0,1,0µØÏÂÕâÁù¸ö
+    input wire [3:0] countD_shi,//0,0,1,0,1,0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     input wire [3:0] countD_ge,
     input wire [3:0] countE_shi,
     input wire [3:0] countE_ge,
     input wire [3:0] countF_shi,
     input wire [3:0] countF_ge,
     output wire  leds,
-    //Í¼ÏñÊä³öÐÅºÅ
-    output wire [2:0] video_red,    //ºìÉ«ÏñËØ£¬3Î»
-    output wire [2:0] video_green,  //ÂÌÉ«ÏñËØ£¬3Î»
-    output wire [1:0] video_blue,   //À¶É«ÏñËØ£¬2Î»
-    output wire       video_hsync,  //ÐÐÍ¬²½£¨Ë®Æ½Í¬²½£©ÐÅºÅ
-    output wire       video_vsync,  //³¡Í¬²½£¨´¹Ö±Í¬²½£©ÐÅºÅ
-    output wire       video_clk,    //ÏñËØÊ±ÖÓÊä³ö
-    output wire       video_de      //ÐÐÊý¾ÝÓÐÐ§ÐÅºÅ£¬ÓÃÓÚÇø·ÖÏûÒþÆÚ
+    //Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
+    output wire [2:0] video_red,    //ï¿½ï¿½É«ï¿½ï¿½ï¿½Ø£ï¿½3Î»
+    output wire [2:0] video_green,  //ï¿½ï¿½É«ï¿½ï¿½ï¿½Ø£ï¿½3Î»
+    output wire [1:0] video_blue,   //ï¿½ï¿½É«ï¿½ï¿½ï¿½Ø£ï¿½2Î»
+    output wire       video_hsync,  //ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½Ë®Æ½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
+    output wire       video_vsync,  //ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±Í¬ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
+    output wire       video_clk,    //ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½
+    output wire       video_de      //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ÅºÅ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 );
   // generate pixel clock
   logic clk_pix;
@@ -55,7 +55,7 @@ module lcd_top (
   assign leds =1'b0 ;
  
 
-  wire [79:0] line_0; // ÎªÁË·½±ã¸³Öµ£¬Ò»¸öasciiÕ¼ÓÃ8bit
+  wire [79:0] line_0; // Îªï¿½Ë·ï¿½ï¿½ã¸³Öµï¿½ï¿½Ò»ï¿½ï¿½asciiÕ¼ï¿½ï¿½8bit
   wire [79:0] line_1; // 56-bit line buffer, 7 bit per ascii character
 
   assign line_0 = {8'h20,countA_shi+8'h30,countA_ge+8'h30,countB_shi+8'h30,countB_ge+8'h30,countC_shi+8'h30,countC_ge+8'h30,8'h20};
@@ -363,16 +363,16 @@ endmodule
 module dvi_module (
     input   wire          clk,
     input     wire        clk_locked,
-    //Í¼ÏñÊä³öÐÅºÅ
-    output wire [2:0] video_red,    //ºìÉ«ÏñËØ£¬3Î»
-    output wire [2:0] video_green,  //ÂÌÉ«ÏñËØ£¬3Î»
-    output wire [1:0] video_blue,   //À¶É«ÏñËØ£¬2Î»
-    output wire       video_hsync,  //ÐÐÍ¬²½£¨Ë®Æ½Í¬²½£©ÐÅºÅ
-    output wire       video_vsync,  //³¡Í¬²½£¨´¹Ö±Í¬²½£©ÐÅºÅ
-    output wire       video_clk,    //ÏñËØÊ±ÖÓÊä³ö
-    output wire       video_de,     //ÐÐÊý¾ÝÓÐÐ§ÐÅºÅ£¬ÓÃÓÚÇø·ÖÏûÒþÆÚ
+    //Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
+    output wire [2:0] video_red,    //ï¿½ï¿½É«ï¿½ï¿½ï¿½Ø£ï¿½3Î»
+    output wire [2:0] video_green,  //ï¿½ï¿½É«ï¿½ï¿½ï¿½Ø£ï¿½3Î»
+    output wire [1:0] video_blue,   //ï¿½ï¿½É«ï¿½ï¿½ï¿½Ø£ï¿½2Î»
+    output wire       video_hsync,  //ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½Ë®Æ½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
+    output wire       video_vsync,  //ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±Í¬ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
+    output wire       video_clk,    //ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½
+    output wire       video_de,     //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ÅºÅ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-    input wire [79:0] line_0_ascii,  //Ã¿¸öasciiÂëÕ¼8Î»
+    input wire [79:0] line_0_ascii,  //Ã¿ï¿½ï¿½asciiï¿½ï¿½Õ¼8Î»
     input wire [79:0] line_1_ascii
 
 );
@@ -410,8 +410,8 @@ module dvi_module (
 
   wire [2:0] ascii_column;
   wire [3:0] ascii_line;
-  assign ascii_column = sx[5:3]; // ·Å´ó8±¶£¬Ä¬ÈÏ×´Ì¬ÏÂ£¬Ò»¸ö×Ö·ûºáÏòÕ¼8¸öÏñËØ
-  assign ascii_line = sy[6:3]; // ·Å´ó8±¶£¬Ä¬ÈÏ×´Ì¬ÏÂ£¬Ò»¸ö×Ö·û×ÝÏòÕ¼16¸öÏñËØ
+  assign ascii_column = sx[5:3]; // ï¿½Å´ï¿½8ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½×´Ì¬ï¿½Â£ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Õ¼8ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+  assign ascii_line = sy[6:3]; // ï¿½Å´ï¿½8ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½×´Ì¬ï¿½Â£ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Õ¼16ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
   ascii_rom_async ascii_rom_inst (
       .addr({ascii[6:0], ascii_line}),
