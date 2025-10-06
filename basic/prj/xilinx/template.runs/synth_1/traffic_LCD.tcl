@@ -34,8 +34,8 @@ read_verilog -library xil_defaultlib {
   d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/clock_1HZ.v
   d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/control.v
   d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/count.v
-  d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/traffic_LCD.v
   d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/trafficlight.v
+  d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/traffic_LCD.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
