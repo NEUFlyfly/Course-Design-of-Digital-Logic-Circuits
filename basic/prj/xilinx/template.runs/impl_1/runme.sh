@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='d:/code/Verilog/DL-CD/toolChainTest/prj/xilinx/template.runs/impl_1'
+HD_PWD='d:/code/Verilog/DL-CD/CourseDesign-DL/basic/prj/xilinx/template.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

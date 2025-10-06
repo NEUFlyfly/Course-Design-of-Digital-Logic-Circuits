@@ -2,12 +2,12 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Mon Oct  6 18:23:38 2025
-# Process ID: 46668
-# Current directory: d:/code/Verilog/DL-CD/toolChainTest/prj/xilinx/template.runs/synth_1
+# Start of session at: Tue Oct  7 01:46:05 2025
+# Process ID: 30168
+# Current directory: d:/code/Verilog/DL-CD/CourseDesign-DL/basic/prj/xilinx/template.runs/synth_1
 # Command line: vivado.exe -log traffic_LCD.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source traffic_LCD.tcl
-# Log file: d:/code/Verilog/DL-CD/toolChainTest/prj/xilinx/template.runs/synth_1/traffic_LCD.vds
-# Journal file: d:/code/Verilog/DL-CD/toolChainTest/prj/xilinx/template.runs/synth_1\vivado.jou
+# Log file: d:/code/Verilog/DL-CD/CourseDesign-DL/basic/prj/xilinx/template.runs/synth_1/traffic_LCD.vds
+# Journal file: d:/code/Verilog/DL-CD/CourseDesign-DL/basic/prj/xilinx/template.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source traffic_LCD.tcl -notrace
 Command: synth_design -top traffic_LCD -part xc7a200tfbg676-1
@@ -15,17 +15,17 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 37188 
+INFO: Helper process launched with PID 30724 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 339.352 ; gain = 68.664
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 339.793 ; gain = 70.641
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'traffic_LCD' [d:/code/Verilog/DL-CD/toolChainTest/user/src/traffic_LCD.v:1]
-INFO: [Synth 8-6157] synthesizing module 'clock_1HZ' [d:/code/Verilog/DL-CD/toolChainTest/user/src/clock_1HZ.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'clock_1HZ' (1#1) [d:/code/Verilog/DL-CD/toolChainTest/user/src/clock_1HZ.v:1]
-INFO: [Synth 8-6157] synthesizing module 'trafficlight' [d:/code/Verilog/DL-CD/toolChainTest/user/src/trafficlight.v:1]
+INFO: [Synth 8-6157] synthesizing module 'traffic_LCD' [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/traffic_LCD.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clock_1HZ' [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/clock_1HZ.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'clock_1HZ' (1#1) [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/clock_1HZ.v:1]
+INFO: [Synth 8-6157] synthesizing module 'trafficlight' [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/trafficlight.v:1]
 	Parameter Y_time bound to: 6'b000011 
 	Parameter AG_time bound to: 6'b011011 
-INFO: [Synth 8-6157] synthesizing module 'control' [d:/code/Verilog/DL-CD/toolChainTest/user/src/control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'control' [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/control.v:1]
 	Parameter Y_time bound to: 6'b000011 
 	Parameter S0 bound to: 2'b00 
 	Parameter S1 bound to: 2'b01 
@@ -37,21 +37,21 @@ INFO: [Synth 8-6157] synthesizing module 'control' [d:/code/Verilog/DL-CD/toolCh
 	Parameter RED_B bound to: 2 - type: integer 
 	Parameter YELLOW_B bound to: 1 - type: integer 
 	Parameter GREEN_B bound to: 0 - type: integer 
-INFO: [Synth 8-226] default block is never used [d:/code/Verilog/DL-CD/toolChainTest/user/src/control.v:43]
-INFO: [Synth 8-226] default block is never used [d:/code/Verilog/DL-CD/toolChainTest/user/src/control.v:71]
-INFO: [Synth 8-6155] done synthesizing module 'control' (2#1) [d:/code/Verilog/DL-CD/toolChainTest/user/src/control.v:1]
-INFO: [Synth 8-6157] synthesizing module 'count' [d:/code/Verilog/DL-CD/toolChainTest/user/src/count.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'count' (3#1) [d:/code/Verilog/DL-CD/toolChainTest/user/src/count.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'trafficlight' (4#1) [d:/code/Verilog/DL-CD/toolChainTest/user/src/trafficlight.v:1]
-INFO: [Synth 8-6157] synthesizing module 'lcd_top' [d:/code/Verilog/DL-CD/toolChainTest/user/src/lcd_top.sv:3]
+INFO: [Synth 8-226] default block is never used [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/control.v:47]
+INFO: [Synth 8-226] default block is never used [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/control.v:75]
+INFO: [Synth 8-6155] done synthesizing module 'control' (2#1) [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'count' [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/count.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'count' (3#1) [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/count.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'trafficlight' (4#1) [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/trafficlight.v:1]
+INFO: [Synth 8-6157] synthesizing module 'lcd_top' [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/lcd_top.sv:3]
 	Parameter CNT_1S bound to: 27'b010111110101111000010000000 
-INFO: [Synth 8-6157] synthesizing module 'clock_divider' [d:/code/Verilog/DL-CD/toolChainTest/user/src/lcd_top.sv:348]
-INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (5#1) [d:/code/Verilog/DL-CD/toolChainTest/user/src/lcd_top.sv:348]
-INFO: [Synth 8-6157] synthesizing module 'dvi_module' [d:/code/Verilog/DL-CD/toolChainTest/user/src/lcd_top.sv:363]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider' [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/lcd_top.sv:513]
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (5#1) [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/lcd_top.sv:513]
+INFO: [Synth 8-6157] synthesizing module 'dvi_module' [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/lcd_top.sv:529]
 	Parameter CORDW bound to: 10 - type: integer 
 	Parameter MAX_COLUMN bound to: 10 - type: integer 
 	Parameter MAX_LINE bound to: 3 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'simple_480p' [d:/code/Verilog/DL-CD/toolChainTest/user/src/lcd_top.sv:462]
+INFO: [Synth 8-6157] synthesizing module 'simple_480p' [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/lcd_top.sv:628]
 	Parameter HA_END bound to: 639 - type: integer 
 	Parameter HS_STA bound to: 655 - type: integer 
 	Parameter HS_END bound to: 751 - type: integer 
@@ -60,21 +60,21 @@ INFO: [Synth 8-6157] synthesizing module 'simple_480p' [d:/code/Verilog/DL-CD/to
 	Parameter VS_STA bound to: 489 - type: integer 
 	Parameter VS_END bound to: 491 - type: integer 
 	Parameter SCREEN bound to: 524 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'simple_480p' (6#1) [d:/code/Verilog/DL-CD/toolChainTest/user/src/lcd_top.sv:462]
-INFO: [Synth 8-6157] synthesizing module 'ascii_rom_async' [d:/code/Verilog/DL-CD/toolChainTest/user/src/lcd_top.sv:119]
-INFO: [Synth 8-6155] done synthesizing module 'ascii_rom_async' (7#1) [d:/code/Verilog/DL-CD/toolChainTest/user/src/lcd_top.sv:119]
-WARNING: [Synth 8-6014] Unused sequential element vga_hsync_reg was removed.  [d:/code/Verilog/DL-CD/toolChainTest/user/src/lcd_top.sv:444]
-WARNING: [Synth 8-6014] Unused sequential element vga_vsync_reg was removed.  [d:/code/Verilog/DL-CD/toolChainTest/user/src/lcd_top.sv:445]
-WARNING: [Synth 8-6014] Unused sequential element vga_r_reg was removed.  [d:/code/Verilog/DL-CD/toolChainTest/user/src/lcd_top.sv:446]
-WARNING: [Synth 8-6014] Unused sequential element vga_g_reg was removed.  [d:/code/Verilog/DL-CD/toolChainTest/user/src/lcd_top.sv:447]
-WARNING: [Synth 8-6014] Unused sequential element vga_b_reg was removed.  [d:/code/Verilog/DL-CD/toolChainTest/user/src/lcd_top.sv:448]
-INFO: [Synth 8-6155] done synthesizing module 'dvi_module' (8#1) [d:/code/Verilog/DL-CD/toolChainTest/user/src/lcd_top.sv:363]
-WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [d:/code/Verilog/DL-CD/toolChainTest/user/src/lcd_top.sv:67]
-WARNING: [Synth 8-6014] Unused sequential element ascii_reg was removed.  [d:/code/Verilog/DL-CD/toolChainTest/user/src/lcd_top.sv:89]
-WARNING: [Synth 8-6014] Unused sequential element number_reg was removed.  [d:/code/Verilog/DL-CD/toolChainTest/user/src/lcd_top.sv:109]
-INFO: [Synth 8-6155] done synthesizing module 'lcd_top' (9#1) [d:/code/Verilog/DL-CD/toolChainTest/user/src/lcd_top.sv:3]
-WARNING: [Synth 8-350] instance 'u2' of module 'lcd_top' requires 22 connections, but only 20 given [d:/code/Verilog/DL-CD/toolChainTest/user/src/traffic_LCD.v:54]
-INFO: [Synth 8-6155] done synthesizing module 'traffic_LCD' (10#1) [d:/code/Verilog/DL-CD/toolChainTest/user/src/traffic_LCD.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'simple_480p' (6#1) [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/lcd_top.sv:628]
+INFO: [Synth 8-6157] synthesizing module 'ascii_rom_async' [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/lcd_top.sv:107]
+INFO: [Synth 8-6155] done synthesizing module 'ascii_rom_async' (7#1) [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/lcd_top.sv:107]
+WARNING: [Synth 8-6014] Unused sequential element vga_hsync_reg was removed.  [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/lcd_top.sv:610]
+WARNING: [Synth 8-6014] Unused sequential element vga_vsync_reg was removed.  [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/lcd_top.sv:611]
+WARNING: [Synth 8-6014] Unused sequential element vga_r_reg was removed.  [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/lcd_top.sv:612]
+WARNING: [Synth 8-6014] Unused sequential element vga_g_reg was removed.  [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/lcd_top.sv:613]
+WARNING: [Synth 8-6014] Unused sequential element vga_b_reg was removed.  [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/lcd_top.sv:614]
+INFO: [Synth 8-6155] done synthesizing module 'dvi_module' (8#1) [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/lcd_top.sv:529]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/lcd_top.sv:67]
+WARNING: [Synth 8-6014] Unused sequential element ascii_reg was removed.  [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/lcd_top.sv:83]
+WARNING: [Synth 8-6014] Unused sequential element number_reg was removed.  [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/lcd_top.sv:98]
+INFO: [Synth 8-6155] done synthesizing module 'lcd_top' (9#1) [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/lcd_top.sv:3]
+WARNING: [Synth 8-350] instance 'u2' of module 'lcd_top' requires 22 connections, but only 20 given [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/traffic_LCD.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'traffic_LCD' (10#1) [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/traffic_LCD.v:1]
 WARNING: [Synth 8-3331] design lcd_top has unconnected port countD_shi[3]
 WARNING: [Synth 8-3331] design lcd_top has unconnected port countD_shi[2]
 WARNING: [Synth 8-3331] design lcd_top has unconnected port countD_shi[1]
@@ -84,7 +84,7 @@ WARNING: [Synth 8-3331] design lcd_top has unconnected port countD_ge[2]
 WARNING: [Synth 8-3331] design lcd_top has unconnected port countD_ge[1]
 WARNING: [Synth 8-3331] design lcd_top has unconnected port countD_ge[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 395.523 ; gain = 124.836
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 395.848 ; gain = 126.695
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -97,47 +97,47 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 395.523 ; gain = 124.836
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 395.848 ; gain = 126.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 395.523 ; gain = 124.836
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 395.848 ; gain = 126.695
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a200tfbg676-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/code/Verilog/DL-CD/toolChainTest/user/data/remote.xdc]
-WARNING: [Vivado 12-507] No nets matched 'reset_btn_IBUF'. [d:/code/Verilog/DL-CD/toolChainTest/user/data/remote.xdc:58]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [d:/code/Verilog/DL-CD/toolChainTest/user/data/remote.xdc:58]
+Parsing XDC File [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/data/remote.xdc]
+WARNING: [Vivado 12-507] No nets matched 'reset_btn_IBUF'. [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/data/remote.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/data/remote.xdc:58]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [d:/code/Verilog/DL-CD/toolChainTest/user/data/remote.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/code/Verilog/DL-CD/toolChainTest/user/data/remote.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/traffic_LCD_propImpl.xdc].
+Finished Parsing XDC File [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/data/remote.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/data/remote.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/traffic_LCD_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/traffic_LCD_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 792.676 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 791.012 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 792.691 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 791.062 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 792.691 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 792.691 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 791.062 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 791.062 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 792.691 ; gain = 522.004
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 791.062 ; gain = 521.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tfbg676-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 792.691 ; gain = 522.004
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 791.062 ; gain = 521.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 792.691 ; gain = 522.004
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 791.062 ; gain = 521.910
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "clk_1HZ" won't be mapped to RAM because address size (28) is larger than maximum supported(25)
 INFO: [Synth 8-802] inferred FSM for state register 'cur_state_reg' in module 'control'
@@ -157,9 +157,9 @@ INFO: [Synth 8-5546] ROM "sy" won't be mapped to RAM because it is too sparse
                       S3 |                               11 |                               11
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'cur_state_reg' using encoding 'sequential' in module 'control'
-WARNING: [Synth 8-327] inferring latch for variable 'control_LD3n_reg' [d:/code/Verilog/DL-CD/toolChainTest/user/src/control.v:39]
+WARNING: [Synth 8-327] inferring latch for variable 'control_LD3n_reg' [d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/control.v:39]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 792.691 ; gain = 522.004
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 791.062 ; gain = 521.910
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -269,7 +269,7 @@ INFO: [Synth 8-5546] ROM "u2/dvi_inst/display_inst/sy" won't be mapped to RAM be
 WARNING: [Synth 8-3917] design traffic_LCD has port leds driven by constant 0
 WARNING: [Synth 8-3917] design traffic_LCD has port video_blue[1] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 792.691 ; gain = 522.004
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 791.062 ; gain = 521.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -296,13 +296,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 792.691 ; gain = 522.004
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 791.062 ; gain = 521.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 821.102 ; gain = 550.414
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 819.922 ; gain = 550.770
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -314,7 +314,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 830.164 ; gain = 559.477
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 828.969 ; gain = 559.816
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -338,7 +338,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 830.164 ; gain = 559.477
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 828.969 ; gain = 559.816
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -351,7 +351,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 830.164 ; gain = 559.477
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 828.969 ; gain = 559.816
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -363,25 +363,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 830.164 ; gain = 559.477
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 828.969 ; gain = 559.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 830.164 ; gain = 559.477
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 828.969 ; gain = 559.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 830.164 ; gain = 559.477
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 828.969 ; gain = 559.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 830.164 ; gain = 559.477
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 828.969 ; gain = 559.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -429,17 +429,17 @@ Report Instance Areas:
 |11    |      display_inst   |simple_480p     |    84|
 +------+---------------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 830.164 ; gain = 559.477
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 828.969 ; gain = 559.816
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 830.164 ; gain = 162.309
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 830.164 ; gain = 559.477
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 828.969 ; gain = 164.602
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 828.969 ; gain = 559.816
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 830.164 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 828.969 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   LD => LDCE (inverted pins: G): 1 instances
@@ -447,12 +447,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 46 Infos, 21 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 830.164 ; gain = 559.477
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 828.969 ; gain = 559.816
 INFO: [Common 17-600] The following parameters have non-default value.
 general.maxThreads
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 830.164 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 828.969 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'd:/code/Verilog/DL-CD/toolChainTest/prj/xilinx/template.runs/synth_1/traffic_LCD.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'd:/code/Verilog/DL-CD/CourseDesign-DL/basic/prj/xilinx/template.runs/synth_1/traffic_LCD.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file traffic_LCD_utilization_synth.rpt -pb traffic_LCD_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Oct  6 18:24:21 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  7 01:46:51 2025...

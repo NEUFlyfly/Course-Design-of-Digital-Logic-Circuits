@@ -69,12 +69,12 @@ set rc [catch {
   create_project -in_memory -part xc7a200tfbg676-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir d:/code/Verilog/DL-CD/toolChainTest/prj/xilinx/template.cache/wt [current_project]
-  set_property parent.project_path d:/code/Verilog/DL-CD/toolChainTest/prj/xilinx/template.xpr [current_project]
-  set_property ip_output_repo d:/code/Verilog/DL-CD/toolChainTest/prj/xilinx/template.cache/ip [current_project]
+  set_property webtalk.parent_dir d:/code/Verilog/DL-CD/CourseDesign-DL/basic/prj/xilinx/template.cache/wt [current_project]
+  set_property parent.project_path d:/code/Verilog/DL-CD/CourseDesign-DL/basic/prj/xilinx/template.xpr [current_project]
+  set_property ip_output_repo d:/code/Verilog/DL-CD/CourseDesign-DL/basic/prj/xilinx/template.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet d:/code/Verilog/DL-CD/toolChainTest/prj/xilinx/template.runs/synth_1/traffic_LCD.dcp
-  read_xdc d:/code/Verilog/DL-CD/toolChainTest/user/data/remote.xdc
+  add_files -quiet d:/code/Verilog/DL-CD/CourseDesign-DL/basic/prj/xilinx/template.runs/synth_1/traffic_LCD.dcp
+  read_xdc d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/data/remote.xdc
   link_design -top traffic_LCD -part xc7a200tfbg676-1
   close_msg_db -file init_design.pb
 } RESULT]

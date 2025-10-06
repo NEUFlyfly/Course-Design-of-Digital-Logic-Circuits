@@ -1,7 +1,7 @@
 {
 	"toolChain": "xilinx",
 	"prjName": {
-		"PL": "template"
+		"PL": "basci_task"
 	},
 	"soc": {
 		"core": "none"

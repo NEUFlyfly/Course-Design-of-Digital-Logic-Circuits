@@ -23,19 +23,19 @@ create_project -in_memory -part xc7a200tfbg676-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir d:/code/Verilog/DL-CD/toolChainTest/prj/xilinx/template.cache/wt [current_project]
-set_property parent.project_path d:/code/Verilog/DL-CD/toolChainTest/prj/xilinx/template.xpr [current_project]
+set_property webtalk.parent_dir d:/code/Verilog/DL-CD/CourseDesign-DL/basic/prj/xilinx/template.cache/wt [current_project]
+set_property parent.project_path d:/code/Verilog/DL-CD/CourseDesign-DL/basic/prj/xilinx/template.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/code/Verilog/DL-CD/toolChainTest/prj/xilinx/template.cache/ip [current_project]
+set_property ip_output_repo d:/code/Verilog/DL-CD/CourseDesign-DL/basic/prj/xilinx/template.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib -sv d:/code/Verilog/DL-CD/toolChainTest/user/src/lcd_top.sv
+read_verilog -library xil_defaultlib -sv d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/lcd_top.sv
 read_verilog -library xil_defaultlib {
-  d:/code/Verilog/DL-CD/toolChainTest/user/src/clock_1HZ.v
-  d:/code/Verilog/DL-CD/toolChainTest/user/src/control.v
-  d:/code/Verilog/DL-CD/toolChainTest/user/src/count.v
-  d:/code/Verilog/DL-CD/toolChainTest/user/src/traffic_LCD.v
-  d:/code/Verilog/DL-CD/toolChainTest/user/src/trafficlight.v
+  d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/clock_1HZ.v
+  d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/control.v
+  d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/count.v
+  d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/traffic_LCD.v
+  d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/src/trafficlight.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -45,8 +45,8 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc d:/code/Verilog/DL-CD/toolChainTest/user/data/remote.xdc
-set_property used_in_implementation false [get_files d:/code/Verilog/DL-CD/toolChainTest/user/data/remote.xdc]
+read_xdc d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/data/remote.xdc
+set_property used_in_implementation false [get_files d:/code/Verilog/DL-CD/CourseDesign-DL/basic/user/data/remote.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
