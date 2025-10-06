@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "d:/code/Verilog/DL-CD/toolChainTest/user/src/control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-2263] Analyzing Verilog file "d:/code/Verilog/DL-CD/toolChainTest/user/src/count.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module count
+INFO: [VRFC 10-2263] Analyzing Verilog file "d:/code/Verilog/DL-CD/toolChainTest/user/src/trafficlight.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module trafficlight
+INFO: [VRFC 10-2263] Analyzing Verilog file "d:/code/Verilog/DL-CD/toolChainTest/user/sim/trafficlight_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module trafficlight_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "d:/code/Verilog/DL-CD/toolChainTest/prj/xilinx/template.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

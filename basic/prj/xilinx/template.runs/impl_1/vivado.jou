@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Oct  6 18:25:21 2025
+# Process ID: 35432
+# Current directory: d:/code/Verilog/DL-CD/toolChainTest/prj/xilinx/template.runs/impl_1
+# Command line: vivado.exe -log traffic_LCD.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source traffic_LCD.tcl -notrace
+# Log file: d:/code/Verilog/DL-CD/toolChainTest/prj/xilinx/template.runs/impl_1/traffic_LCD.vdi
+# Journal file: d:/code/Verilog/DL-CD/toolChainTest/prj/xilinx/template.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source traffic_LCD.tcl -notrace

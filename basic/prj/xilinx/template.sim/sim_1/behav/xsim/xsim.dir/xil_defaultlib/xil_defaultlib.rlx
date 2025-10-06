@@ -1,0 +1,9 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+d:/code/Verilog/DL-CD/toolChainTest/prj/xilinx/template.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+d:/code/Verilog/DL-CD/toolChainTest/user/sim/trafficlight_tb.v,1757860756,verilog,,,,trafficlight_tb,,,,,,,,
+d:/code/Verilog/DL-CD/toolChainTest/user/src/control.v,1758030590,verilog,,d:/code/Verilog/DL-CD/toolChainTest/user/src/count.v,,control,,,,,,,,
+d:/code/Verilog/DL-CD/toolChainTest/user/src/count.v,1757860396,verilog,,d:/code/Verilog/DL-CD/toolChainTest/user/src/trafficlight.v,,count,,,,,,,,
+d:/code/Verilog/DL-CD/toolChainTest/user/src/trafficlight.v,1757860426,verilog,,d:/code/Verilog/DL-CD/toolChainTest/user/sim/trafficlight_tb.v,,trafficlight,,,,,,,,

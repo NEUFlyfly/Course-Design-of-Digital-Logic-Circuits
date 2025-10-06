@@ -1,0 +1,6 @@
+read_verilog -sv -formal -overwrite {workspace}/user/src/trafficlight.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/control.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/count.v
+read_verilog -sv -formal -overwrite {workspace}/user/sim/trafficlight_tb.v
+design -reset-vlog; proc;
+write_json {workspace}/prj/netlist/trafficlight_tb.json
