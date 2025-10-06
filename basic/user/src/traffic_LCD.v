@@ -17,32 +17,34 @@ output wire [5:0] A_time,
 output wire [5:0] B_time
 );
 wire W1,W2;
-assign W2 = ~reset_btn; // �޸ĸ�λ�ź�����
+assign W2 = ~reset_btn; // 修改复位信号连接
 clock_1HZ u0(
 .CLK(clk_50M),
 .CLRn(W2),
 .clk_1HZ(W1)
 );
+
 trafficlight u1(
 .CLK(W1),
 .RSTn(W2),
 .AS(AS),
 .BS(BS),
-.state(state),
-.A_time(A_time),
+.state(state), // 信号灯状态
+.A_time(A_time), //信号灯计数器数值
 .B_time(B_time),
-.led(led)
+.led(led) //信号灯显示状态
 );
+
 wire [3:0]A_1;
 wire [3:0]A_0;
 wire [3:0]B_1;
 wire [3:0]B_0;
-assign A_1 = (A_time+1) / 10;
+assign A_1 = (A_time+1) / 10; //+1是因为预置数就是2或者26，因为0-2是三个态，但是要显示成1-3这三个态
 assign A_0 = (A_time+1) % 10;
 assign B_1 = (B_time+1) / 10;
 assign B_0 = (B_time+1) % 10;
 
-// ����LED�����߼�
+// 添加LED解码逻辑
 wire [3:0] ledA_shi, ledA_ge, ledB_shi, ledB_ge, ledC_shi, ledC_ge;
 assign ledA_shi = led[5] ? 4'b0001 : 4'b0000;
 assign ledA_ge = led[4] ? 4'b0001 : 4'b0000;

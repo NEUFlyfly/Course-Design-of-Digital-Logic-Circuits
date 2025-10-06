@@ -1,30 +1,30 @@
 `default_nettype none `timescale 1ns / 1ps
 
 module lcd_top (
-    input wire clk_50M,     //50MHz ʱ������
+    input wire clk_50M,     //50MHz 时钟输入
 
-    input wire reset_btn,  //BTN6�ֶ���λ��ť����������·������ʱΪ1
+    input wire reset_btn,  //BTN6手动复位按钮，带消抖电路，按下时为1
     input wire [3:0] countA_shi,
     input wire [3:0] countA_ge,
     input wire [3:0] countB_shi,
-    input wire [3:0] countB_ge,   
+    input wire [3:0] countB_ge,
     input wire [3:0] countC_shi,
     input wire [3:0] countC_ge,
-    input wire [3:0] countD_shi,//0,0,1,0,1,0����������
+    input wire [3:0] countD_shi,//0,0,1,0,1,0地下这六个
     input wire [3:0] countD_ge,
     input wire [3:0] countE_shi,
     input wire [3:0] countE_ge,
     input wire [3:0] countF_shi,
     input wire [3:0] countF_ge,
     output wire  leds,
-    //ͼ������ź�
-    output wire [2:0] video_red,    //��ɫ���أ�3λ
-    output wire [2:0] video_green,  //��ɫ���أ�3λ
-    output wire [1:0] video_blue,   //��ɫ���أ�2λ
-    output wire       video_hsync,  //��ͬ����ˮƽͬ�����ź�
-    output wire       video_vsync,  //��ͬ������ֱͬ�����ź�
-    output wire       video_clk,    //����ʱ�����
-    output wire       video_de      //��������Ч�źţ���������������
+    //图像输出信号
+    output wire [2:0] video_red,    //红色像素，3位
+    output wire [2:0] video_green,  //绿色像素，3位
+    output wire [1:0] video_blue,   //蓝色像素，2位
+    output wire       video_hsync,  //行同步（水平同步）信号
+    output wire       video_vsync,  //场同步（垂直同步）信号
+    output wire       video_clk,    //像素时钟输出
+    output wire       video_de      //行数据有效信号，用于区分消隐期
 );
   // generate pixel clock
   logic clk_pix;
@@ -55,7 +55,7 @@ module lcd_top (
   assign leds =1'b0 ;
  
 
-  wire [79:0] line_0; // Ϊ�˷��㸳ֵ��һ��asciiռ��8bit
+  wire [79:0] line_0; // 为了方便赋值，一个ascii占用8bit
   wire [79:0] line_1; // 56-bit line buffer, 7 bit per ascii character
 
   assign line_0 = {8'h20,countA_shi+8'h30,countA_ge+8'h30,countB_shi+8'h30,countB_ge+8'h30,countC_shi+8'h30,countC_ge+8'h30,8'h20};
@@ -363,16 +363,16 @@ endmodule
 module dvi_module (
     input   wire          clk,
     input     wire        clk_locked,
-    //ͼ������ź�
-    output wire [2:0] video_red,    //��ɫ���أ�3λ
-    output wire [2:0] video_green,  //��ɫ���أ�3λ
-    output wire [1:0] video_blue,   //��ɫ���أ�2λ
-    output wire       video_hsync,  //��ͬ����ˮƽͬ�����ź�
-    output wire       video_vsync,  //��ͬ������ֱͬ�����ź�
-    output wire       video_clk,    //����ʱ�����
-    output wire       video_de,     //��������Ч�źţ���������������
+    //图像输出信号
+    output wire [2:0] video_red,    //红色像素，3位
+    output wire [2:0] video_green,  //绿色像素，3位
+    output wire [1:0] video_blue,   //蓝色像素，2位
+    output wire       video_hsync,  //行同步（水平同步）信号
+    output wire       video_vsync,  //场同步（垂直同步）信号
+    output wire       video_clk,    //像素时钟输出
+    output wire       video_de,     //行数据有效信号，用于区分消隐期
 
-    input wire [79:0] line_0_ascii,  //ÿ��ascii��ռ8λ
+    input wire [79:0] line_0_ascii,  //每个ascii码占8位
     input wire [79:0] line_1_ascii
 
 );
@@ -410,8 +410,8 @@ module dvi_module (
 
   wire [2:0] ascii_column;
   wire [3:0] ascii_line;
-  assign ascii_column = sx[5:3]; // �Ŵ�8����Ĭ��״̬�£�һ���ַ�����ռ8������
-  assign ascii_line = sy[6:3]; // �Ŵ�8����Ĭ��״̬�£�һ���ַ�����ռ16������
+  assign ascii_column = sx[5:3]; // 放大8倍，默认状态下，一个字符横向占8个像素
+  assign ascii_line = sy[6:3]; // 放大8倍，默认状态下，一个字符纵向占16个像素
 
   ascii_rom_async ascii_rom_inst (
       .addr({ascii[6:0], ascii_line}),

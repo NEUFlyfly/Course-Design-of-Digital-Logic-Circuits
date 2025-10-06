@@ -1,25 +1,25 @@
 module control(
 input wire CLK,
 input wire RSTn,
-input wire AS,//±±·½ÏòÎª1
+input wire AS,//åŒ—æ–¹å‘ä¸º1
 input wire BS,
-input wire T3,//¶¨Ê±Æ÷Íê³É
+input wire T3,//å®šæ—¶å™¨å®Œæˆ
 input wire T27,
-input wire [5:0]SD3,//¶¨Ê±Æ÷ÊıÖµ
+input wire [5:0]SD3,//å®šæ—¶å™¨æ•°å€¼
 input wire [5:0]SD27,
-output wire C3,//¼ÆÊıÆ÷Ê¹ÄÜĞÅºÅ
+output wire C3,//è®¡æ•°å™¨ä½¿èƒ½ä¿¡å·
 output wire C27,
-output wire LD3n,//¼ÓÔØÊı¾İÊ¹ÄÜĞÅºÅ
+output wire LD3n,//åŠ è½½æ•°æ®ä½¿èƒ½ä¿¡å·
 output wire LD27n,
-output wire [1:0]state,//×´Ì¬
-output wire [5:0]A_time,//A·½ÏòÊıÖµ
-output wire [5:0]B_time,//B·½ÏòÊıÖµ
-output wire [5:0]led//Êä³öµÆ
+output wire [1:0]state,//çŠ¶æ€
+output wire [5:0]A_time,//Aæ–¹å‘æ•°å€¼
+output wire [5:0]B_time,//Bæ–¹å‘æ•°å€¼
+output wire [5:0]led//è¾“å‡ºç¯
 );
-parameter Y_time = 6'd3;//»ÆµÆÊ±¼ä
+parameter Y_time = 6'd3;//é»„ç¯æ—¶é—´
 parameter [1:0]S0=2'b00,S1=2'b01,S2=2'b10,S3=2'b11;
 
-// LEDÎ»¶¨Òå
+// LEDä½å®šä¹‰
 parameter RED_A = 5, YELLOW_A = 4, GREEN_A = 3;
 parameter RED_B = 2, YELLOW_B = 1, GREEN_B = 0;
 
@@ -39,6 +39,10 @@ assign C27 = control_C27;
 assign LD3n = control_LD3n;
 assign LD27n = control_LD27n;
 
+// S0: A æ–¹å‘ç»¿ç¯ï¼ŒB æ–¹å‘çº¢ç¯ã€‚
+// S1: A æ–¹å‘é»„ç¯ï¼ŒB æ–¹å‘çº¢ç¯ã€‚
+// S2: A æ–¹å‘çº¢ç¯ï¼ŒB æ–¹å‘ç»¿ç¯ã€‚
+// S3: A æ–¹å‘çº¢ç¯ï¼ŒB æ–¹å‘é»„ç¯ã€‚
 always @(*) begin
     case(cur_state)
     S0:if(AK) next_state = S1;
@@ -53,14 +57,14 @@ always @(*) begin
     endcase
 end
 
-always @(posedge CLK or negedge RSTn) begin
+always @(posedge CLK or negedge RSTn) begin //çŠ¶æ€å¯„å­˜å™¨
     if(!RSTn) cur_state <= S0;
     else cur_state <= next_state;
 end
 
 always @(*) begin
     if(!RSTn) begin
-        control_led = (1 << GREEN_A) | (1 << RED_B); // AÂÌ Bºì
+        control_led = (1 << GREEN_A) | (1 << RED_B); // Aç»¿ Bçº¢
         control_LD27n = 1'b0;
         control_C27 = 1'b1;
         control_C3 = 1'b0;
@@ -69,8 +73,8 @@ always @(*) begin
     end
     else begin
     case(cur_state)
-    S0:begin  // AÂÌ Bºì
-        control_C27 = 1'b1;
+    S0:begin  // Aç»¿ Bçº¢
+        control_C27 = 1'b1; // è®¡æ•°å™¨æ§åˆ¶ï¼Œå¯åŠ¨27ç§’è®¡æ•°å™¨ï¼Œå…³é—­ä¸‰ç§’è®¡æ•°å™¨
         control_LD27n = 1'b1;
         control_C3 = 1'b0;
         control_LD3n = 1'b0;
@@ -78,7 +82,7 @@ always @(*) begin
         control_B_time = SD27 + Y_time;
         control_led = (1 << GREEN_A) | (1 << RED_B);
     end
-    S1:begin  // A»Æ Bºì
+    S1:begin  // Aé»„ Bçº¢
         control_C27 = 1'b0;
         control_LD27n = 1'b0;
         control_C3 = 1'b1;
@@ -87,7 +91,7 @@ always @(*) begin
         control_B_time = SD3;
         control_led = (1 << YELLOW_A) | (1 << RED_B);
     end
-    S2:begin  // Aºì BÂÌ
+    S2:begin  // Açº¢ Bç»¿
         control_C27 = 1'b1;
         control_LD27n = 1'b1;
         control_C3 = 1'b0;
@@ -96,7 +100,7 @@ always @(*) begin
         control_B_time = SD27;
         control_led = (1 << RED_A) | (1 << GREEN_B);
     end
-    S3:begin  // Aºì B»Æ
+    S3:begin  // Açº¢ Bé»„
         control_C27 = 1'b0;
         control_LD27n = 1'b0;
         control_C3 = 1'b1;
